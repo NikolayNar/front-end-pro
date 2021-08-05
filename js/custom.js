@@ -1,7 +1,26 @@
-var pi = Math.PI;
-var r = 2;
-var h = 2;
+alert('Hello! I can figure out which number is bigger. Are you ready?')
 
-var result = pi * Math.pow(r, 2) * h; 
+var numberFirst = +prompt('Enter first number');
 
-console.log('V = ', result);
+if (numberFirst === '' || null || undefined) {
+    alert('Error!!! Incorrect enter!');
+    alert('Lets try again. Refresh me after click "OK"');
+} else {
+    var numberSecond = +prompt('Enter second number');
+};
+
+if (numberFirst < numberSecond){
+    alert('This number is bigger ==> ' + numberSecond + ', this number is smaller ==> ' + numberFirst);
+};
+
+if (numberFirst > numberSecond){
+    alert('This number is bigger ==> ' + numberFirst + ', this number is smaller ==> ' + numberSecond); 
+}; 
+
+if (numberFirst === numberSecond){
+    alert('Error!!! This is the same numbers!');
+    alert('Lets try again. Refresh me after click "OK"');
+};
+
+console.log('numberFirst = ', numberFirst);
+console.log('numberFirst = ', numberSecond);
