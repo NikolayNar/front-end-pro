@@ -1,26 +1,26 @@
-alert('Hello! I can figure out which number is bigger. Are you ready?')
+alert('Hello! Let`s get to know each other better. Are you ready?')
 
-var numberFirst = +prompt('Enter first number');
+var numberAge = +prompt('How old are you?');
 
-if (numberFirst === '' || null || undefined) {
-    alert('Error!!! Incorrect enter!');
+if (numberAge == '' || null || undefined) {
+    alert('Error!!! It`s not an age!');
     alert('Lets try again. Refresh me after click "OK"');
 } else {
-    var numberSecond = +prompt('Enter second number');
+    var smoke = confirm('Do you smoke? If "YES" click "OK", if "NO" - "CANCEL"');
 };
 
-if (numberFirst < numberSecond){
-    alert('This number is bigger ==> ' + numberSecond + ', this number is smaller ==> ' + numberFirst);
-};
+console.log('Age --> ', numberAge);
+console.log('Smoking --> ', smoke);
 
-if (numberFirst > numberSecond){
-    alert('This number is bigger ==> ' + numberFirst + ', this number is smaller ==> ' + numberSecond); 
-}; 
 
-if (numberFirst === numberSecond){
-    alert('Error!!! This is the same numbers!');
-    alert('Lets try again. Refresh me after click "OK"');
-};
-
-console.log('numberFirst = ', numberFirst);
-console.log('numberFirst = ', numberSecond);
+if (numberAge < 18 && smoke === false){
+    alert('Great! You`re too young!');
+} else if (numberAge < 18 && smoke === true){
+    alert('Oh my God! I`ll told your mother!');
+} else if (numberAge >= 18 && smoke === false){
+    alert('Amazing! Keep it going!');
+}else if (numberAge >= 18 && smoke === true){
+    alert('Congrats! You`ll die so soon!');
+} else{
+    alert('Don`t try to cheat Me! I`m Skynet!');
+}
