@@ -1,14 +1,21 @@
-alert('Let`s create your color');
 
-var numberRedColor = +prompt('How much RED color?');
-var numberGreenColor = +prompt('How much GREEN color?');
-var numberBlueColor = +prompt('How much BLUE color?');
+// Это вариант с использованием массива
+/* var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-function rgb(red, green, blue){
-    var color = red + ',' + green + ',' + blue;
-    return color;
+for (var i = 1; i <= numbers.length; i++) {
+    for (var j = 1; j < numbers.length; j++) {
+        console.log (i + '*' + j + '=' + j);
+    }
+    console.log (i + '*' + j + '=' + j);
+    console.log ('--/--/--/--/--/');
+} */
+
+
+// Это вариант без масива
+for (var i = 1; i <= 10; i++) {
+    for (var j = 1; j < 10; j++) {
+        console.log (i + '*' + j + '=' + j);
+    };
+    console.log (i + '*' + j + '=' + j);
+    console.log ('--/--/--/--/--/');
 };
-
-var result = rgb(numberRedColor, numberGreenColor, numberBlueColor);
-
-console.log('rbg('+result+')');
