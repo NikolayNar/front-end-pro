@@ -1,30 +1,40 @@
-const obj = {
-    prop: '42',
-    prop2: [8, 9, 10, {
-      beautifulPropertyName: 88,
-      'property with spaces': {
-        a: {
-          b: '',
-          c: {
-            someProperty: [{
-              'prop name': 'I am a smart programmer',
-            }],
-          },
-        },
-      },
-    }],
-    prop3: function() {
-      return {
-        baz: 'Hello',
-        bar: {
-          anotherBeautifulProp: [8, {
-            target: 'It was simple!',
-          }],
-        },
-      };
+// With For
+
+function max(arr) {
+  let bigNumber = null;
+
+  for (let i of arr) {
+    if (i > bigNumber) {
+      bigNumber = i;
     }
-  };
+  } 
+  return bigNumber
+  
+}
 
-console.log('obj', obj.prop2[3]['property with spaces'].a.c.someProperty[0]['prop name']);
+console.log('Solve with "For" loop:')
+console.log(max([8]), 'one element test, must return 8');
+console.log(max([8, 17]), '2 elements test, must return 17'); 
+console.log(max([1, 8, 37, 5, 17]), '5 elements test, must return 37');
 
-console.log('obj', obj.prop3().bar.anotherBeautifulProp[1].target);
+// With Recursion
+
+function max(arr) {
+  if (arr.length <= 1 ) {
+    return arr[0];
+  }
+
+  let lastEl = arr[arr.length - 1];
+
+  if (lastEl > arr[0]) {
+    arr[0] = lastEl
+  }
+  arr.pop()
+  
+  return max(arr)
+}
+
+console.log('Solve with "Recursion":')
+console.log(max([8]), 'one element test, must return 8');
+console.log(max([8, 17]), '2 elements test, must return 17');
+console.log(max([1, 8, 37, 5, 17]), '5 elements test, must return 37');
