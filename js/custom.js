@@ -1,7 +1,17 @@
-var pi = Math.PI;
-var r = 2;
-var h = 2;
+const button = document.querySelector('button');
+const input = document.getElementById('myInput');
+const ul = document.createElement('ul');
 
-var result = pi * Math.pow(r, 2) * h; 
+document.body.append(ul);
 
-console.log('V = ', result);
+button.addEventListener('click', () => {
+    if (!input.value) {
+        alert("You must write something!");
+        return;
+    }
+    
+    let li = document.createElement('li');
+    li.innerText = input.value;
+    ul.append(li);
+    input.value = "";
+})
