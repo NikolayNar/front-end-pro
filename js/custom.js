@@ -7,11 +7,11 @@ document.body.append(ul);
 button.addEventListener('click', () => {
     if (!input.value) {
         alert("You must write something!");
+        return;
     }
-    else {
-        let li = document.createElement('li');
-        li.innerText = input.value;
-        ul.append(li);
-    }
-    document.getElementById("myInput").value = "";
+    
+    let li = document.createElement('li');
+    li.innerText = input.value;
+    ul.append(li);
+    input.value = "";
 })
